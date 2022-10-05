@@ -56,7 +56,7 @@ class ContenedorProductos {
     if (index === -1) {
       return false;
     } else {
-      let borrado = this.productos.splice(index, 1);
+      let borrado = this.carritos.splice(index, 1);
       return borrado[0];
     }
   }
@@ -146,6 +146,24 @@ router.delete("/:id/productos/:id_prod", (req, res) => {
       ).then(() => console.log(`Producto eliminado ${borrado} del carrito`));
       res.send(carritosApi.traerTodos());
     }
+  }
+});
+
+router.delete("/:id", (req, res) => {
+  let target = carritosApi.traerCarrito(req.params.id);
+  if (!target) {
+    res.send("No se ha encontrado ningun carrito con ese id");
+  } else {
+    let eliminado = JSON.stringify(
+      carritosApi.borrarCarrito(req.params.id),
+      null,
+      2
+    );
+    writeFile(
+      "./carritos.json",
+      JSON.stringify(carritosApi.traerTodos(), null, 2)
+    );
+    res.send(`Se ha borrado el carrito ${eliminado}`);
   }
 });
 

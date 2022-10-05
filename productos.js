@@ -111,9 +111,9 @@ router.delete("/:id", (req, res) => {
   writeFile(
     "./productos.json",
     JSON.stringify(productosApi.traerTodos(), null, 2)
-  ).then(() => console.log(`Producto editado`));
+  ).then(() => console.log(`Producto borrado`));
 
-  res.send(`El producto ${borrado} ha sido eliminado.`);
+  res.send(`El producto ${JSON.stringify(borrado)} ha sido eliminado.`);
 });
 
 // define the about route

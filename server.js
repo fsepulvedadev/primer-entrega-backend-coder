@@ -10,7 +10,7 @@ const PORT = 8080 || process.env.PORT;
 
 app.use(express.json());
 app.use(cors());
-app.use("/api/carritos", carritos);
+app.use("/api/carrito", carritos);
 app.use("/api/productos", productos);
 app.use("/api", router);
 

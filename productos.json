@@ -54,24 +54,6 @@
     "stock": "2344"
   },
   {
-    "id": 9,
-    "timestamp": 1664374557704,
-    "nombre": "asddaadsas",
-    "desc": "asddddd",
-    "codigo": "213124124",
-    "precio": "14223",
-    "stock": "123444"
-  },
-  {
-    "id": 10,
-    "timestamp": 1664374616872,
-    "nombre": "Fernet Branca",
-    "desc": "Ferne branca",
-    "codigo": "12355666",
-    "precio": "3452",
-    "stock": "4032"
-  },
-  {
     "id": 11,
     "timestamp": 1664375173566,
     "nombre": "Campari",
